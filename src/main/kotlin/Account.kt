@@ -1,6 +1,8 @@
 package org.example
 
-class Account(val id: String, var balance: Int) {
+import java.math.BigDecimal
+
+class Account(val id: String, var balance: BigDecimal) {
     init {
         require(id.length == 16){"Account number must be 16 digits"}
         require(id.all {it.isDigit()} ){"Account number must be numeric"}
