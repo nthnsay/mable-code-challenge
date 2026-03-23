@@ -2,7 +2,15 @@ package org.example
 
 import java.math.BigDecimal
 
-class CsvTransferParser {
+class  CsvTransferParser {
+    fun parse(csv: String): List<TransferRequest> {
+        return csv
+            .lineSequence()
+            .filter { it.isNotBlank() }
+            .drop(1) // if there is a header row
+            .map { parseRow(it) }
+            .toList()
+    }
     fun parseRow(row: String): TransferRequest {
         val parts = row.split(",")
 
