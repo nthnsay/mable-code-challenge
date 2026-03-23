@@ -1,10 +1,13 @@
+import org.example.Account
+import org.example.TransferService
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
+
 
 class TransferServiceTest {
 
     @Test
-    fun `should transfer money between accounts succesfully`(){
+    fun `should transfer money between accounts successfully`(){
         val from = Account("12345678", 200)
         val to = Account("11111111", 50)
 
