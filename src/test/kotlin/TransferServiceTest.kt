@@ -17,4 +17,16 @@ class TransferServiceTest {
         assertEquals(150, from.balance)
         assertEquals(100, to.balance)
     }
+
+    @Test
+    fun `Should not transfer money between accounts when there is insufficient funds`(){
+        val from = Account("12345678", 200)
+        val to = Account("11111111", 50)
+
+        val service = TransferService()
+        service.transfer (from, to, 201)
+
+        assertEquals(200, from.balance)
+        assertEquals(50, to.balance)
+    }
 }
