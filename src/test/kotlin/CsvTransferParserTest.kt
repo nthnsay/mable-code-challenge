@@ -1,4 +1,7 @@
+import org.example.CsvTransferParser
+import org.example.TransferRequest
 import org.junit.jupiter.api.Test
+import java.math.BigDecimal
 import kotlin.test.assertEquals
 
 class CsvTransferParserTest {
@@ -9,13 +12,13 @@ class CsvTransferParserTest {
 
         val row = "1111234522226789,1212343433335665,500.00"
 
-        val result = praser.parseRow(row)
+        val result = parser.parseRow(row)
 
         assertEquals(
             TransferRequest(
                 fromAccountId = "1111234522226789",
                 toAccountId = "1212343433335665",
-                amount = "500.00"
+                amount = BigDecimal("500.00")
             ),
             result
         )
