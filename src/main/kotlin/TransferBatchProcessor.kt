@@ -16,12 +16,7 @@ class TransferBatchProcessor(private val transferService: TransferService) {
                 return@map TransferResult(request, false, "Destination account not found")
             }
 
-            try {
-                transferService.transfer(from, to, request.amount)
-                TransferResult(request, true)
-            } catch (e: IllegalArgumentException) {
-                TransferResult(request, false, e.message)
-            }
+            transferService.transfer(from, to, request.amount)
         }
     }
 
