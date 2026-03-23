@@ -7,7 +7,6 @@ class  CsvTransferParser {
         return csv
             .lineSequence()
             .filter { it.isNotBlank() }
-            .drop(1) // if there is a header row
             .map { parseRow(it) }
             .toList()
     }
