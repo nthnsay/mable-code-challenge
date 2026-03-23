@@ -16,13 +16,13 @@ class TransferServiceTest {
         service.transfer(from, to, BigDecimal("50.00"))
 
         assertEquals(BigDecimal("150.00"), from.balance)
-        assertEquals(BigDecimal(100), to.balance)
+        assertEquals(BigDecimal("100.00"), to.balance)
     }
 
     @Test
     fun `Should not transfer money between accounts when there is insufficient funds`(){
         val from = Account("1111234522221234", BigDecimal("200.00"))
-        val to = Account("1111234522221234", BigDecimal(50))
+        val to = Account("1111234522221234", BigDecimal("50.00"))
 
         val service = TransferService()
         service.transfer (from, to, BigDecimal("201.00"))
