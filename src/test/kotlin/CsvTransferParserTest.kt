@@ -47,4 +47,21 @@ class CsvTransferParserTest {
             parser.parseRow(row)
         }
     }
+
+    @Test
+    fun `should parse multiple rows`() {
+        val parser = CsvTransferParser()
+
+        val csv = """
+            fromAccountId,toAccountId,amount
+            1234567811111111,1234567822222222,300.00
+            1111111187654321,2222222287654321, 50.00
+        """.trimIndent()
+
+        val result = parser.parse(csv)
+
+        assertEquals(2, result.size)
+        assertEquals(TransferRequest("1234567811111111", "1234567822222222", BigDecimal("300.00")), results[0])
+        assertEquals(TransferRequest("1111111187654321", "2222222287654321", BigDecimal("50.00")), results[1])
+    }
 }
