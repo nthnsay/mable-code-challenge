@@ -1,5 +1,5 @@
-import org.example.CsvTransferParser
-import org.example.TransferRequest
+import org.example.CsvParser.CsvTransferParser
+import org.example.domain.TransferRequest
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
 import java.math.BigDecimal

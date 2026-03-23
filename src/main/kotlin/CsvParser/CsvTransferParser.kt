@@ -1,6 +1,6 @@
-package org.example
+package org.example.CsvParser
 
-import java.math.BigDecimal
+import org.example.domain.TransferRequest
 
 class  CsvTransferParser {
     fun parse(csv: String): List<TransferRequest> {
@@ -10,6 +10,7 @@ class  CsvTransferParser {
             .map { parseRow(it) }
             .toList()
     }
+
     fun parseRow(row: String): TransferRequest {
         val parts = row.split(",")
 

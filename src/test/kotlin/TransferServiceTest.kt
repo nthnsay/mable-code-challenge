@@ -1,5 +1,5 @@
-import org.example.Account
-import org.example.TransferService
+import org.example.domain.Account
+import org.example.Service.TransferService
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import java.math.BigDecimal

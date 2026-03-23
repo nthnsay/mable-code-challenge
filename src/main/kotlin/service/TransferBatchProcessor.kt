@@ -1,6 +1,8 @@
-package org.example
+package org.example.Service
 
-import java.math.BigDecimal
+import org.example.domain.Account
+import org.example.domain.TransferRequest
+import org.example.domain.TransferResult
 
 class TransferBatchProcessor(private val transferService: TransferService) {
     fun process(requests: List<TransferRequest>,

@@ -1,7 +1,7 @@
-import org.example.Account
-import org.example.TransferBatchProcessor
-import org.example.TransferRequest
-import org.example.TransferService
+import org.example.domain.Account
+import org.example.Service.TransferBatchProcessor
+import org.example.domain.TransferRequest
+import org.example.Service.TransferService
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertTrue

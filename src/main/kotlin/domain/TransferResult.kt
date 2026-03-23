@@ -1,4 +1,4 @@
-package org.example
+package org.example.domain
 
 data class TransferResult(
     val request: TransferRequest,

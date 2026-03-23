@@ -1,5 +1,5 @@
-import org.example.CsvAccountParser
-import org.example.CsvTransferParser
+import org.example.CsvParser.CsvAccountParser
+import org.example.CsvParser.CsvTransferParser
 import org.junit.jupiter.api.Test
 import java.math.BigDecimal
 import kotlin.test.assertEquals

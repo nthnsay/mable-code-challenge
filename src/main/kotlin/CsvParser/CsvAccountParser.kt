@@ -1,4 +1,6 @@
-package org.example
+package org.example.CsvParser
+
+import org.example.domain.Account
 
 class CsvAccountParser {
 
